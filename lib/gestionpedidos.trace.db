@@ -1,0 +1,1876 @@
+10-15 03:07:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TEST" no encontrada
+Table "TEST" not found; SQL statement:
+INSERT INTO TEST VALUES('021191', 'Dolores') [42102-176]
+10-15 03:07:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "EMPLEADOS" ya existe
+Table "EMPLEADOS" already exists; SQL statement:
+CREATE TABLE EMPLEADOS(CLAVE VARCHAR(6) PRIMARY KEY, NOMBRE VARCHAR(10)) [42101-176]
+10-15 03:08:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Columna "NAME" no encontrada
+Column "NAME" not found; SQL statement:
+Select NAME from EMPLEADOS where clave=021191 [42122-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.command.dml.Select.prepare(Select.java:831)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:75)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:178)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:30)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:79)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+10-15 03:19:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT NOMBRE FROM EMPLEADOS WHERE CLAVE=[[*]C@6993876A "; se esperaba "ALL, ANY, SOME, SELECT, FROM"
+Syntax error in SQL statement "SELECT NOMBRE FROM EMPLEADOS WHERE CLAVE=[[*]C@6993876A "; expected "ALL, ANY, SOME, SELECT, FROM"; SQL statement:
+Select NOMBRE from EMPLEADOS where clave=[C@6993876a [42001-176]
+10-15 03:20:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT NOMBRE FROM EMPLEADOS WHERE CLAVE=[[*]C@626187C1 "; se esperaba "ALL, ANY, SOME, SELECT, FROM"
+Syntax error in SQL statement "SELECT NOMBRE FROM EMPLEADOS WHERE CLAVE=[[*]C@626187C1 "; expected "ALL, ANY, SOME, SELECT, FROM"; SQL statement:
+Select NOMBRE from EMPLEADOS where clave=[C@626187c1 [42001-176]
+10-15 03:20:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT NOMBRE FROM EMPLEADOS WHERE CLAVE=[[*]C@458343C9 "; se esperaba "ALL, ANY, SOME, SELECT, FROM"
+Syntax error in SQL statement "SELECT NOMBRE FROM EMPLEADOS WHERE CLAVE=[[*]C@458343C9 "; expected "ALL, ANY, SOME, SELECT, FROM"; SQL statement:
+Select NOMBRE from EMPLEADOS where clave=[C@458343c9 [42001-176]
+10-15 03:21:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT NOMBRE FROM EMPLEADOS WHERE CLAVE=[[*]C@2EECCBCF "; se esperaba "ALL, ANY, SOME, SELECT, FROM"
+Syntax error in SQL statement "SELECT NOMBRE FROM EMPLEADOS WHERE CLAVE=[[*]C@2EECCBCF "; expected "ALL, ANY, SOME, SELECT, FROM"; SQL statement:
+Select NOMBRE from EMPLEADOS where clave=[C@2eeccbcf [42001-176]
+10-15 03:24:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT NOMBRE FROM EMPLEADOS WHERE CLAVE=JPASSWORDFIELD1.GETPASSWORD()[*].TOSTRING() "
+Syntax error in SQL statement "SELECT NOMBRE FROM EMPLEADOS WHERE CLAVE=JPASSWORDFIELD1.GETPASSWORD()[*].TOSTRING() "; SQL statement:
+Select NOMBRE from EMPLEADOS where clave=jPasswordField1.getPassword().toString() [42000-176]
+10-15 03:36:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Valor Invalido "0" para el parametro "columnIndex"
+Invalid value "0" for parameter "columnIndex" [90008-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:227)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3165)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3193)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:286)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:183)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:31)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:80)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+10-15 03:37:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Valor Invalido "0" para el parametro "columnIndex"
+Invalid value "0" for parameter "columnIndex" [90008-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:227)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3165)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3193)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:286)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:183)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:31)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:80)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+10-15 03:38:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Valor Invalido "0" para el parametro "columnIndex"
+Invalid value "0" for parameter "columnIndex" [90008-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:227)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3165)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3193)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:286)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:183)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:31)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:80)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+10-15 17:26:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No hay datos disponibles.
+No data is available [2000-176]
+10-15 17:27:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No hay datos disponibles.
+No data is available [2000-176]
+10-15 17:31:39 database: close
+org.h2.message.DbException: IO Exception: "java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db"
+IO Exception: "java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db" [90031-176]
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.convertIOException(DbException.java:329)
+	at org.h2.store.FileStore.write(FileStore.java:332)
+	at org.h2.store.PageStore.writePage(PageStore.java:1369)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:107)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:148)
+	at org.h2.store.PageOutputStream.flush(PageOutputStream.java:156)
+	at org.h2.store.PageLog.checkpoint(PageLog.java:697)
+	at org.h2.store.PageStore.checkpoint(PageStore.java:436)
+	at org.h2.engine.Database.closeOpenFilesAndUnlock(Database.java:1298)
+	at org.h2.engine.Database.close(Database.java:1251)
+	at org.h2.engine.DatabaseCloser.run(DatabaseCloser.java:64)
+Caused by: org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db"
+IO Exception: "java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db" [90031-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 12 more
+Caused by: java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo
+	at java.io.RandomAccessFile.writeBytes(Native Method)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:525)
+	at org.h2.store.fs.FileDisk.write(FilePathDisk.java:468)
+	at org.h2.store.fs.FileUtils.writeFully(FileUtils.java:361)
+	at org.h2.store.FileStore.write(FileStore.java:329)
+	... 9 more
+10-15 17:48:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-15 18:04:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT COUNT(NOMBRE) FROM EMPLEADOS WHERE CLAVE= '[C@45e54fd1')[*] "
+Syntax error in SQL statement "SELECT COUNT(NOMBRE) FROM EMPLEADOS WHERE CLAVE= '[C@45e54fd1')[*] "; SQL statement:
+Select count(NOMBRE) from EMPLEADOS where clave= '[C@45e54fd1') [42000-176]
+10-15 18:07:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT COUNT(NOMBRE) FROM EMPLEADOS WHERE CLAVE= '[C@2a06c422')[*] "
+Syntax error in SQL statement "SELECT COUNT(NOMBRE) FROM EMPLEADOS WHERE CLAVE= '[C@2a06c422')[*] "; SQL statement:
+Select count(NOMBRE) from EMPLEADOS where clave= '[C@2a06c422') [42000-176]
+10-15 18:07:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT COUNT(NOMBRE) FROM EMPLEADOS WHERE CLAVE= '[C@1813b546')[*] "
+Syntax error in SQL statement "SELECT COUNT(NOMBRE) FROM EMPLEADOS WHERE CLAVE= '[C@1813b546')[*] "; SQL statement:
+Select count(NOMBRE) from EMPLEADOS where clave= '[C@1813b546') [42000-176]
+10-15 18:07:56 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT COUNT(NOMBRE) FROM EMPLEADOS WHERE CLAVE= '[C@4ffa91a0')[*] "
+Syntax error in SQL statement "SELECT COUNT(NOMBRE) FROM EMPLEADOS WHERE CLAVE= '[C@4ffa91a0')[*] "; SQL statement:
+Select count(NOMBRE) from EMPLEADOS where clave= '[C@4ffa91a0') [42000-176]
+2016-10-16 20:12:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "CREATE TABLE CLIENTES(TELEFONO INT, NOMBRE VARCHAR(20),CALLE VARCHAR(100,[*]NUMERO INT) "; se esperaba "K, M, G, CHAR, )"
+Syntax error in SQL statement "CREATE TABLE CLIENTES(TELEFONO INT, NOMBRE VARCHAR(20),CALLE VARCHAR(100,[*]NUMERO INT) "; expected "K, M, G, CHAR, )"; SQL statement:
+create table clientes(telefono int, nombre varchar(20),calle varchar(100,numero int) [42001-192]
+2016-10-16 20:13:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "CREATE TABLE CLIENTES(TELEFONO INT, NOMBRE VARCHAR(20),CALLE VARCHAR(100),NUMERO INT [*]"; se esperaba "(, FOR, UNSIGNED, NOT, NULL, AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE CLIENTES(TELEFONO INT, NOMBRE VARCHAR(20),CALLE VARCHAR(100),NUMERO INT [*]"; expected "(, FOR, UNSIGNED, NOT, NULL, AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+create table clientes(telefono int, nombre varchar(20),calle varchar(100),numero int [42001-192]
+2016-10-16 20:13:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "'' (CLIENTES: NUMERO INT)"
+Data conversion error converting "'' (CLIENTES: NUMERO INT)"; SQL statement:
+INSERT INTO "PUBLIC"."CLIENTES"("TELEFONO","NOMBRE","CALLE","NUMERO")VALUES(?,?,?,?) -- (?1, ?2, ?3, ?4) [22018-192]
+2016-10-16 20:13:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "'' (CLIENTES: NUMERO INT)"
+Data conversion error converting "'' (CLIENTES: NUMERO INT)"; SQL statement:
+INSERT INTO "PUBLIC"."CLIENTES"("TELEFONO","NOMBRE","CALLE","NUMERO")VALUES(?,?,?,?) -- (?1, ?2, ?3, ?4) [22018-192]
+10-16 20:22:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Sergio"
+Data conversion error converting "Sergio" [22018-176]
+10-17 11:52:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No hay datos disponibles.
+No data is available [2000-176]
+10-17 11:54:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Valor Invalido "0" para el parametro "columnIndex"
+Invalid value "0" for parameter "columnIndex" [90008-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:227)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3165)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3193)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:286)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:235)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:32)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:87)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+10-17 12:00:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Valor Invalido "0" para el parametro "columnIndex"
+Invalid value "0" for parameter "columnIndex" [90008-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:227)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3165)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3193)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:286)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:235)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:32)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:87)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+10-17 12:01:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No hay datos disponibles.
+No data is available [2000-176]
+10-17 12:03:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No hay datos disponibles.
+No data is available [2000-176]
+10-17 12:05:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Columna "021191" no encontrada
+Column "021191" not found [42122-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3148)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3210)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:304)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:235)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:32)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:87)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+10-17 12:06:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Valor Invalido "2" para el parametro "columnIndex"
+Invalid value "2" for parameter "columnIndex" [90008-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:227)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3165)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3193)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:286)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:235)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:32)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:87)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+10-17 12:08:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-176]
+10-17 12:09:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-176]
+10-17 12:14:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-176]
+10-17 12:14:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-176]
+10-17 12:15:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-176]
+10-17 12:17:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-176]
+10-17 12:18:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-176]
+10-17 12:20:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-176]
+10-17 12:21:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 12:22:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 12:25:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-17 12:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 12:35:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 12:38:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Valor Invalido "2" para el parametro "columnIndex"
+Invalid value "2" for parameter "columnIndex" [90008-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:227)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3165)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3193)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:286)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:236)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:32)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:87)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+10-17 12:40:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Valor Invalido "2" para el parametro "columnIndex"
+Invalid value "2" for parameter "columnIndex" [90008-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:227)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3165)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3193)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:286)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:236)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:32)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:87)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+10-17 12:40:12 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Valor Invalido "2" para el parametro "columnIndex"
+Invalid value "2" for parameter "columnIndex" [90008-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:227)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3165)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3193)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:286)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:236)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:32)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:87)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+10-17 12:40:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-17 12:42:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 12:43:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 12:43:51 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-17 12:43:56 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 12:46:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 12:46:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-17 12:48:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 22:18:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 22:26:41 jdbc[4]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:74)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:221)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:32)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:87)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 48 more
+10-17 22:26:41 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-17 22:29:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 22:30:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 22:31:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 22:32:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+2016-10-17 22:35:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Columna "sergio" no encontrada
+Column "sergio" not found; SQL statement:
+select * from clientes where nombre="sergio" [42122-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.command.dml.Select.prepare(Select.java:855)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2016-10-17 22:36:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Columna "Sergio" no encontrada
+Column "Sergio" not found; SQL statement:
+select * from clientes where nombre="Sergio" [42122-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.command.dml.Select.prepare(Select.java:855)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2016-10-17 22:36:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Columna "Sergio" no encontrada
+Column "Sergio" not found; SQL statement:
+select telefono from clientes where nombre="Sergio" [42122-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.command.dml.Select.prepare(Select.java:855)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2016-10-17 22:36:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Columna "sergio" no encontrada
+Column "sergio" not found; SQL statement:
+select * from clientes where nombre="sergio" [42122-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.command.dml.Select.prepare(Select.java:855)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2016-10-17 22:37:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Columna "Sergio" no encontrada
+Column "Sergio" not found; SQL statement:
+select * from clientes where nombre="Sergio" [42122-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.command.dml.Select.prepare(Select.java:855)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+10-17 22:40:33 database: close
+org.h2.message.DbException: IO Exception: "java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db"
+IO Exception: "java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db" [90031-176]
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.convertIOException(DbException.java:329)
+	at org.h2.store.FileStore.write(FileStore.java:332)
+	at org.h2.store.PageStore.writePage(PageStore.java:1369)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:107)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:148)
+	at org.h2.store.PageOutputStream.flush(PageOutputStream.java:156)
+	at org.h2.store.PageLog.checkpoint(PageLog.java:697)
+	at org.h2.store.PageStore.checkpoint(PageStore.java:436)
+	at org.h2.engine.Database.closeOpenFilesAndUnlock(Database.java:1298)
+	at org.h2.engine.Database.close(Database.java:1251)
+	at org.h2.engine.DatabaseCloser.run(DatabaseCloser.java:64)
+Caused by: org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db"
+IO Exception: "java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db" [90031-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 12 more
+Caused by: java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo
+	at java.io.RandomAccessFile.writeBytes(Native Method)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:525)
+	at org.h2.store.fs.FileDisk.write(FilePathDisk.java:468)
+	at org.h2.store.fs.FileUtils.writeFully(FileUtils.java:361)
+	at org.h2.store.FileStore.write(FileStore.java:329)
+	... 9 more
+10-17 22:40:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 22:41:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 22:44:47 database: close
+org.h2.message.DbException: IO Exception: "java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db"
+IO Exception: "java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db" [90031-176]
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.convertIOException(DbException.java:329)
+	at org.h2.store.FileStore.write(FileStore.java:332)
+	at org.h2.store.PageStore.writePage(PageStore.java:1369)
+	at org.h2.store.PageStreamData.write(PageStreamData.java:107)
+	at org.h2.store.PageOutputStream.storePage(PageOutputStream.java:148)
+	at org.h2.store.PageOutputStream.flush(PageOutputStream.java:156)
+	at org.h2.store.PageLog.checkpoint(PageLog.java:697)
+	at org.h2.store.PageStore.checkpoint(PageStore.java:436)
+	at org.h2.engine.Database.closeOpenFilesAndUnlock(Database.java:1298)
+	at org.h2.engine.Database.close(Database.java:1251)
+	at org.h2.engine.DatabaseCloser.run(DatabaseCloser.java:64)
+Caused by: org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db"
+IO Exception: "java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db" [90031-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 12 more
+Caused by: java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo
+	at java.io.RandomAccessFile.writeBytes(Native Method)
+	at java.io.RandomAccessFile.write(RandomAccessFile.java:525)
+	at org.h2.store.fs.FileDisk.write(FilePathDisk.java:468)
+	at org.h2.store.fs.FileUtils.writeFully(FileUtils.java:361)
+	at org.h2.store.FileStore.write(FileStore.java:329)
+	... 9 more
+10-17 22:44:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 23:56:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 23:57:08 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 23:57:51 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-17 23:58:27 jdbc[7]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:74)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:221)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:32)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:87)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 48 more
+10-17 23:58:27 jdbc[7]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:74)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:221)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:32)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:87)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 48 more
+10-17 23:58:27 jdbc[7]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:74)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:221)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:32)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:87)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 48 more
+10-17 23:58:27 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 00:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 00:28:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 00:30:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 00:32:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 10:05:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 10:19:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 11:48:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 11:57:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:21:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:22:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:24:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:25:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:26:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:27:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:27:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-18 12:29:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:29:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:33:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:33:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-18 12:38:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:39:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:41:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:44:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:45:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:52:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:53:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:54:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:54:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-18 12:55:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-18 12:56:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 12:56:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-18 12:57:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-18 12:58:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 13:00:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 13:01:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 13:01:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 13:02:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 13:02:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 13:03:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 13:05:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 13:06:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 17:04:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 17:43:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-18 18:04:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-21 19:16:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 19:38:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 19:45:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 19:45:44 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 19:49:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 19:52:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 19:56:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 20:04:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 20:06:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 20:06:46 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 20:07:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 20:08:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 20:09:30 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-22 20:09:50 jdbc[9]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:74)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:247)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:41)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:99)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 48 more
+10-22 20:09:50 jdbc[9]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:74)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:247)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:41)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:99)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 48 more
+10-22 20:09:50 jdbc[9]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:74)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at gestionpedidos.NewJFrame.jButton1ActionPerformed(NewJFrame.java:247)
+	at gestionpedidos.NewJFrame.access$000(NewJFrame.java:41)
+	at gestionpedidos.NewJFrame$1.actionPerformed(NewJFrame.java:99)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 48 more
+10-22 20:09:50 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 20:10:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 20:11:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 20:14:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 20:16:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-22 20:19:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 17:31:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 17:31:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 17:44:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 17:45:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 18:06:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 18:12:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 18:43:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 18:45:06 jdbc[6]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:74)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at gestionpedidos.NewJFrame.jPasswordField1KeyReleased(NewJFrame.java:369)
+	at gestionpedidos.NewJFrame.access$500(NewJFrame.java:42)
+	at gestionpedidos.NewJFrame$5.keyReleased(NewJFrame.java:128)
+	at java.awt.Component.processKeyEvent(Component.java:6486)
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2832)
+	at java.awt.Component.processEvent(Component.java:6302)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:806)
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1074)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:945)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:771)
+	at java.awt.Component.dispatchEventImpl(Component.java:4752)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 46 more
+10-23 18:45:06 jdbc[6]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:74)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at gestionpedidos.NewJFrame.jPasswordField1KeyReleased(NewJFrame.java:369)
+	at gestionpedidos.NewJFrame.access$500(NewJFrame.java:42)
+	at gestionpedidos.NewJFrame$5.keyReleased(NewJFrame.java:128)
+	at java.awt.Component.processKeyEvent(Component.java:6486)
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2832)
+	at java.awt.Component.processEvent(Component.java:6302)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:806)
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1074)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:945)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:771)
+	at java.awt.Component.dispatchEventImpl(Component.java:4752)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 46 more
+10-23 18:45:06 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 18:57:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 19:02:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 19:03:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 19:06:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 19:07:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-23 19:13:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-23 19:14:31 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 19:16:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 19:17:56 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 19:19:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 19:20:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 19:21:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 19:24:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 19:30:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-23 19:37:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-23 20:02:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-25 19:33:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-25 19:49:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-31 12:27:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-31 12:30:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-31 12:58:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-31 12:58:42 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Ana"
+Data conversion error converting "Ana" [22018-176]
+10-31 12:59:08 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-31 12:59:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-31 13:01:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-31 13:04:59 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-31 13:05:19 jdbc[7]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:74)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at gestionpedidos.NewJFrame1.jTextFieldTelefonoKeyReleased(NewJFrame1.java:541)
+	at gestionpedidos.NewJFrame1.access$200(NewJFrame1.java:26)
+	at gestionpedidos.NewJFrame1$2.keyReleased(NewJFrame1.java:121)
+	at java.awt.Component.processKeyEvent(Unknown Source)
+	at javax.swing.JComponent.processKeyEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 46 more
+10-31 13:05:19 jdbc[7]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:74)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at gestionpedidos.NewJFrame1.jTextFieldTelefonoKeyReleased(NewJFrame1.java:541)
+	at gestionpedidos.NewJFrame1.access$200(NewJFrame1.java:26)
+	at gestionpedidos.NewJFrame1$2.keyReleased(NewJFrame1.java:121)
+	at java.awt.Component.processKeyEvent(Unknown Source)
+	at javax.swing.JComponent.processKeyEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 46 more
+10-31 13:05:19 database: close
+org.h2.message.DbException: IO Exception: "java.io.EOFException"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db"
+IO Exception: "java.io.EOFException"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db" [90031-176]
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.convertIOException(DbException.java:329)
+	at org.h2.store.FileStore.readFully(FileStore.java:276)
+	at org.h2.store.PageStore.readPage(PageStore.java:1326)
+	at org.h2.store.PageStore.getPage(PageStore.java:750)
+	at org.h2.store.PageStreamTrunk$Iterator.next(PageStreamTrunk.java:252)
+	at org.h2.store.PageLog.free(PageLog.java:214)
+	at org.h2.store.PageStore.compact(PageStore.java:499)
+	at org.h2.engine.Database.closeOpenFilesAndUnlock(Database.java:1301)
+	at org.h2.engine.Database.close(Database.java:1251)
+	at org.h2.engine.Database.removeSession(Database.java:1122)
+	at org.h2.engine.Session.close(Session.java:672)
+	at org.h2.jdbc.JdbcConnection.close(JdbcConnection.java:383)
+	at gestionpedidos.NewJFrame1.jTextFieldTelefonoKeyReleased(NewJFrame1.java:580)
+	at gestionpedidos.NewJFrame1.access$200(NewJFrame1.java:26)
+	at gestionpedidos.NewJFrame1$2.keyReleased(NewJFrame1.java:121)
+	at java.awt.Component.processKeyEvent(Unknown Source)
+	at javax.swing.JComponent.processKeyEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.EOFException"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db"
+IO Exception: "java.io.EOFException"; "C:/Users/Sergio/Sergio/PSP/GestionPedidos/lib/gestionpedidos.h2.db" [90031-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	... 50 more
+Caused by: java.io.EOFException
+	at org.h2.store.fs.FileUtils.readFully(FileUtils.java:347)
+	at org.h2.store.FileStore.readFully(FileStore.java:274)
+	... 47 more
+10-31 13:05:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-31 13:13:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-31 13:14:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-31 13:18:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-31 13:20:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
+10-31 13:23:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "Dolores"
+Data conversion error converting "Dolores" [22018-176]
