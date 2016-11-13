@@ -32,12 +32,15 @@ public class NewJFrame extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
     public NewJFrame() {
+        
         initComponents();
+        jPasswordField1.requestFocus();
+        jPasswordField1.setText("");
         JFrame principal = this;
         this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         this.setSize(200, 500);
         this.setVisible(true);
-        jPasswordField1.setText("");
+        
 
     }
 
@@ -223,81 +226,20 @@ public class NewJFrame extends javax.swing.JFrame {
 
             @Override
             public void run() {
-                NewJDialog dialogoEspera = new NewJDialog(null,false);
+                super.getClass();
+                NewJDialog dialogoEspera = new NewJDialog(null, false);
                 dialogoEspera.setVisible(true);
-                
-                      ConexionBD conexion = new ConexionBD();
-                      conexion.consultaLogin(jPasswordField1.getText());
-                      dialogoEspera.setVisible(false);
+                dialogoEspera.setLocationRelativeTo(null);
+
+                ConexionBD conexion = new ConexionBD();
+                conexion.consultaLogin(jPasswordField1.getText());
+                dialogoEspera.setVisible(false);
             }
         };
-         Thread hilo = new Thread (miRunnable);
-      hilo.start();
-      
-      
-                //        if (!jPasswordField1.getText().equals("")) {
-                //
-                //            //colocamos la ventana en las coordenadas calculadas anteriormente
-                //            //CONEXIÓN A LA BASE DE DATOS
-                //            
-                //            try {
-                //                //Lanzamos el dialogo de espera..
-                //                NewJDialog dialogoEspera = new NewJDialog(this, rootPaneCheckingEnabled);
-                //                
-                //                //Asignar el driver de la base de datos.
-                //                Class.forName("com.mysql.jdbc.Driver");
-                //                //Establecemos la conexión con la base de datos.
-                //                Connection conexion = DriverManager.getConnection("jdbc:mysql://sql7.freesqldatabase.com/sql7143904","sql7143904","TzNhGaxJj6");
-                //                //Realizar la consulta y recoger el resultado en un objeto ResulSet.
-                //                Statement sentencia = conexion.createStatement();
-                //                String contraseña = new String(jPasswordField1.getPassword());
-                //                ResultSet resul = sentencia.executeQuery("Select count(NOMBRE) from Empleados where clave='" + contraseña + "'");
-                //                //Mostrar el resultado de la consulta.
-                //
-                //                while (resul.next()) {
-                //                    dialogoEspera.setVisible(true);
-                //                    if (resul.getInt(1) == 0) {
-                //                        JOptionPane.showMessageDialog(rootPane, "No existe empleado con esa clave! ");
-                //
-                //                        System.out.println(contraseña);
-                //                    } else {
-                //                        resul = sentencia.executeQuery("Select nombre from Empleados where clave ='" + contraseña + "'");
-                //                        while (resul.next()) {
-                //
-                //                            JFrameMenu menu = new JFrameMenu(resul.getString(1));
-                //                            Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
-                //                            int height = pantalla.height;
-                //                            int width = pantalla.width;
-                //                            menu.setSize(width / 2, height / 2);
-                //
-                //                            menu.setLocationRelativeTo(null);
-                //                            menu.setVisible(true);
-                //
-                //                            this.setVisible(false);
-                //                            System.out.println(resul.getInt(1));
-                //
-                //                        }
-                //
-                //                    }
-                //                }
-                // dialogoEspera.setVisible(false);
-                //
-                ////            //Liberar los objetos creados
-                //                resul.close();
-                //                sentencia.close();
-                //                conexion.close();
-                //               
-                //            } catch (ClassNotFoundException ex) {
-                //                System.out.println("Error con el driver de la base de datos ");
-                //
-                //            } catch (SQLException ex) {
-                //                System.out.println("Error en la conexión" + ex.getMessage());
-                //            }
-                //        } else {
-                //            JOptionPane.showMessageDialog(rootPane, "¡El campo CLAVE es obligatorio!");
-                //        }
+        Thread hilo = new Thread(miRunnable);
+        hilo.start();
 
-        
+             
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jPasswordField1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MousePressed
@@ -367,7 +309,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
             if (!jPasswordField1.getText().equals("")) {
 
-            //colocamos la ventana en las coordenadas calculadas anteriormente
+                //colocamos la ventana en las coordenadas calculadas anteriormente
                 //CONEXIÓN A LA BASE DE DATOS
                 try {
                     //Asignar el driver de la base de datos.

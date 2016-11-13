@@ -103,7 +103,7 @@ public class NewJFrame1 extends javax.swing.JFrame implements ListCellRenderer {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(125, 400));
+        setMinimumSize(new java.awt.Dimension(125, 420));
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(590, 353));
 
@@ -425,7 +425,7 @@ public class NewJFrame1 extends javax.swing.JFrame implements ListCellRenderer {
                 .addComponent(jButtonAceptar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(24, 24, 24))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -490,67 +490,85 @@ public class NewJFrame1 extends javax.swing.JFrame implements ListCellRenderer {
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
         // Botón aceptar datos
         //CONEXIÓN A LA BASE DE DATOS
-        try {
-            //Asignar el driver de la base de datos.
-            Class.forName("com.mysql.jdbc.Driver");
-            //Establecemos la conexión con la base de datos.
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://sql7.freesqldatabase.com/sql7143904", "sql7143904", "TzNhGaxJj6");
-            //Realizar la consulta y recoger el resultado en un objeto ResulSet.
-            Statement sentencia = conexion.createStatement();
-            int telefono = Integer.parseInt(jTextFieldTelefono.getText());
-            ResultSet resul = sentencia.executeQuery("Select nombre,calle, numero,piso,puerta from clientes where telefono=" + telefono + "");
-            //Mostrar el resultado de la consulta.
+        
+        Runnable miRunnable = new Runnable() {
 
-            while (resul.next()) {
-                if (resul.getString(1).equals(0)) {
-                    JOptionPane.showMessageDialog(rootPane, "¡No existe empleado con esa clave! ");
+            @Override
+            public void run() {
+                super.getClass();
+                NewJDialog dialogoEspera = new NewJDialog(null, false);
+                dialogoEspera.setVisible(true);
+                dialogoEspera.setLocationRelativeTo(null);
 
-                    //System.out.println(telefono);
-                } else {
-                    jTextField2Nombre.setText(resul.getString(1));
-                    jTextField3Direccion.setText(resul.getString(2));
-                    jTextField4Numero.setText(String.valueOf(resul.getInt(3)));
-                    jTextField5Piso.setText(resul.getString(4));
-                    jTextField7Puerta.setText(resul.getString(5));
-                    //Existe el cliente, por lo que anulamos el poder editar los campos.
-                    jTextField2Nombre.setEditable(false);
-                    jTextField3Direccion.setEditable(false);
-                    jTextField4Numero.setEditable(false);
-                    jTextField1Portal.setEditable(false);
-                    jTextField2Escalera.setEditable(false);
-                    jTextField5Piso.setEditable(false);
-
-                    //Existe el cliente, por lo que podemos modificar los datos
-                    jButtonModfiDatos.setEnabled(true);
-
-                }
-
+                ConexionBD conexion = new ConexionBD();
+                conexion.consultaCliente(jTextFieldTelefono, jTextField2Nombre, jTextField3Direccion, jTextField4Numero, jTextField1Portal, jTextField2Escalera, jTextField5Piso, jTextField7Puerta, jButtonAceptar, jButton2AceptarDatosNuevos, jButton1, jButtonModfiDatos);
+                dialogoEspera.setVisible(false);
             }
-            // El telefono no existe en la base de datos:
-            jTextFieldTelefono.setEnabled(false);
-            jTextField2Nombre.setEnabled(true);
-            jTextField3Direccion.setEnabled(true);
-            jTextField4Numero.setEnabled(true);
-            jTextField5Piso.setEnabled(true);
-            jTextField7Puerta.setEnabled(true);
-            jTextField1Portal.setEnabled(true);
-            jTextField2Escalera.setEnabled(true);
-            //jTextField7Puerta.setEditable(false);
-            jButton1.setVisible(true);
-            jButtonAceptar.setVisible(false);
-            jButton2AceptarDatosNuevos.setVisible(true);
+        };
+        Thread hilo = new Thread(miRunnable);
+        hilo.start();
 
-            //            //Liberar los objetos creados
-            resul.close();
-            sentencia.close();
-            conexion.close();
-
-        } catch (ClassNotFoundException ex) {
-            System.out.println("Error con el driver de la base de datos ");
-
-        } catch (SQLException ex) {
-            System.out.println("Error en la conexión" + ex.toString());
-        }
+//        try {
+//            //Asignar el driver de la base de datos.
+//            Class.forName("com.mysql.jdbc.Driver");
+//            //Establecemos la conexión con la base de datos.
+//            Connection conexion = DriverManager.getConnection("jdbc:mysql://sql7.freesqldatabase.com/sql7143904", "sql7143904", "TzNhGaxJj6");
+//            //Realizar la consulta y recoger el resultado en un objeto ResulSet.
+//            Statement sentencia = conexion.createStatement();
+//            int telefono = Integer.parseInt(jTextFieldTelefono.getText());
+//            ResultSet resul = sentencia.executeQuery("Select nombre,calle, numero,piso,puerta from clientes where telefono=" + telefono + "");
+//            //Mostrar el resultado de la consulta.
+//
+//            while (resul.next()) {
+//                if (resul.getString(1).equals(0)) {
+//                    JOptionPane.showMessageDialog(rootPane, "¡No existe empleado con esa clave! ");
+//
+//                    //System.out.println(telefono);
+//                } else {
+//                    jTextField2Nombre.setText(resul.getString(1));
+//                    jTextField3Direccion.setText(resul.getString(2));
+//                    jTextField4Numero.setText(String.valueOf(resul.getInt(3)));
+//                    jTextField5Piso.setText(resul.getString(4));
+//                    jTextField7Puerta.setText(resul.getString(5));
+//                    //Existe el cliente, por lo que anulamos el poder editar los campos.
+//                    jTextField2Nombre.setEditable(false);
+//                    jTextField3Direccion.setEditable(false);
+//                    jTextField4Numero.setEditable(false);
+//                    jTextField1Portal.setEditable(false);
+//                    jTextField2Escalera.setEditable(false);
+//                    jTextField5Piso.setEditable(false);
+//
+//                    //Existe el cliente, por lo que podemos modificar los datos
+//                    jButtonModfiDatos.setEnabled(true);
+//
+//                }
+//
+//            }
+//            // El telefono no existe en la base de datos:
+//            jTextFieldTelefono.setEnabled(false);
+//            jTextField2Nombre.setEnabled(true);
+//            jTextField3Direccion.setEnabled(true);
+//            jTextField4Numero.setEnabled(true);
+//            jTextField5Piso.setEnabled(true);
+//            jTextField7Puerta.setEnabled(true);
+//            jTextField1Portal.setEnabled(true);
+//            jTextField2Escalera.setEnabled(true);
+//            //jTextField7Puerta.setEditable(false);
+//            jButton1.setVisible(true);
+//            jButtonAceptar.setVisible(false);
+//            jButton2AceptarDatosNuevos.setVisible(true);
+//
+//            //            //Liberar los objetos creados
+//            resul.close();
+//            sentencia.close();
+//            conexion.close();
+//
+//        } catch (ClassNotFoundException ex) {
+//            System.out.println("Error con el driver de la base de datos ");
+//
+//        } catch (SQLException ex) {
+//            System.out.println("Error en la conexión" + ex.toString());
+//        }
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
     private void jTextFieldTelefonoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldTelefonoKeyReleased
